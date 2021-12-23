@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".EndActivity">
+
+    <TextView
+        android:id="@+id/yourscoretv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/score"
+        android:textColor="@color/ternary_color"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/nunito"
+        android:text="12"
+        android:textColor="@color/ternary_color"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/yourscoretv" />
+
+    <TextView
+        android:id="@+id/highscoretv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/nunito"
+        android:text="@string/hscore"
+        android:textColor="@color/ternary_color"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/score" />
+
+    <TextView
+        android:id="@+id/highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/nunito"
+        android:text="12"
+        android:textColor="@color/ternary_color"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/highscoretv" />
+
+    <Button
+        android:id="@+id/playAbtn"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/nunito"
+        android:text="@string/play_again"
+        android:textColor="@color/primary_color"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highscore" />
+
+    <Button
+        android:id="@+id/menuBtn"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/nunito"
+        android:text="@string/menu"
+        android:textColor="@color/primary_color"
+        android:textFontWeight="700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playAbtn"
+        app:layout_constraintVertical_bias="0.304" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

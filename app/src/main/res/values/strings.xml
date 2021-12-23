@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FootballValuesH&amp;L</string>
+    <string name="players_string">PLAYERS</string>
+    <string name="clubs_string">CLUBS</string>
+    <string name="countries_string">COUNTRIES</string>
+    <string name="club_vs_countries_string">CLUBS VS COUNTRIES</string>
+    <string name="default_price">0.00m€</string>
+    <string name="higher_string">HIGHER</string>
+    <string name="lower_string">LOWER</string>
+    <string name="vs">VS</string>
+    <string name="score">Your score:</string>
+    <string name="hscore">High score:</string>
+    <string name="play_again">PLAY AGAIN</string>
+    <string name="menu">Menu</string>
+
+</resources>

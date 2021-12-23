@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "413146540352",
+    "firebase_url": "https://footballpriceshl-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "footballpriceshl",
+    "storage_bucket": "footballpriceshl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413146540352:android:b2435346594671fe05b2a5",
+        "android_client_info": {
+          "package_name": "com.example.footballvalueshl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413146540352-cn0u2jmpfnip4n0p2634k992g06db4c6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBy6abw2WM5UcAkhZHK6_8cPvcuYJkt1a4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413146540352-cn0u2jmpfnip4n0p2634k992g06db4c6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
