@@ -9,7 +9,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/constraintLayout"
+        >
+
+
+
+
         <ImageView
             android:id="@+id/itemPicture"
             android:layout_width="match_parent"
@@ -41,21 +47,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/higherBtn"
-            android:layout_width="189dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="104dp"
-            android:backgroundTint="@color/higher_color"
-            android:fontFamily="@font/nunito"
-            android:text="@string/higher_string"
-            android:textColor="@color/primary_color"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/itemPicture"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/itemName"
-            app:layout_constraintVertical_bias="0.954" />
+
 
 
         <TextView
@@ -76,19 +68,42 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <Button
+            android:id="@+id/higherBtn"
+            android:layout_width="189dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="104dp"
+            android:alpha="0.6"
+            android:backgroundTint="@color/higher_color"
+            android:fontFamily="@font/nunito"
+            android:text="@string/higher_string"
+            android:textColor="@color/primary_color"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemName"
+            app:layout_constraintVertical_bias="0.954" />
+
+        <Button
             android:id="@+id/lowerBtn"
             android:layout_width="189dp"
             android:layout_height="48dp"
+            android:alpha="0.6"
             android:backgroundTint="@color/lower_color"
             android:fontFamily="@font/nunito"
             android:text="@string/lower_string"
             android:textColor="@color/primary_color"
             android:textSize="20sp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/higherBtn"
             app:layout_constraintVertical_bias="0.16" />
+
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

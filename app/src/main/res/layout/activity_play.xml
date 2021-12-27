@@ -2,10 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_color"
     tools:context=".PlayActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/zeroItemFragment"
+        android:name="com.example.footballvalueshl.Item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/firstItemFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/firstItemFragment"
@@ -14,6 +24,7 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/secondItemFragment"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/fragment_item" />
@@ -30,16 +41,17 @@
         tools:layout="@layout/fragment_item" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/queueItemFragment"
+        android:id="@+id/thirdItemFragment"
         android:name="com.example.footballvalueshl.Item"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/secondItemFragment"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstItemFragment"
         tools:layout="@layout/fragment_item" />
+
 
     <TextView
         android:id="@+id/tvvs"
@@ -47,15 +59,18 @@
         android:layout_height="wrap_content"
         android:background="@drawable/circle_text_view"
         android:fontFamily="@font/nunito"
+        android:gravity="center"
         android:text="@string/vs"
         android:textAlignment="center"
         android:textColor="@color/primary_color"
         android:textFontWeight="700"
         android:textSize="35sp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:targetApi="p" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

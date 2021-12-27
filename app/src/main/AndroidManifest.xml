@@ -10,12 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FootballValuesHL">
         <activity
-            android:name=".EndActivity"
+            android:name=".PlayActivity"
             android:exported="false" />
         <activity
-            android:name=".PlayActivity"
-            android:exported="false"
-            />
+            android:name=".EndActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
