@@ -9,19 +9,18 @@
     tools:context=".PlayActivity">
 
 
-
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/zeroItemFragment"
+        android:id="@+id/firstItemFragment"
         android:name="com.example.footballvalueshl.Item"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/firstItemFragment"
+        app:layout_constraintBottom_toTopOf="@id/secondItemFragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/thirdItemFragment"
+        android:id="@+id/zeroItemFragment"
         android:name="com.example.footballvalueshl.Item"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -29,7 +28,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstItemFragment"
+        app:layout_constraintTop_toBottomOf="@+id/secondItemFragment"
+        tools:layout="@layout/fragment_item" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/thirdItemFragment"
+        android:name="com.example.footballvalueshl.Item"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondItemFragment"
         tools:layout="@layout/fragment_item" />
 
     <androidx.fragment.app.FragmentContainerView
@@ -37,18 +47,7 @@
         android:name="com.example.footballvalueshl.Item"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstItemFragment"
-        tools:layout="@layout/fragment_item" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/firstItemFragment"
-        android:name="com.example.footballvalueshl.Item"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/secondItemFragment"
+        app:layout_constraintBottom_toTopOf="@+id/thirdItemFragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,9 +64,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
-
 
     <TextView
         android:id="@+id/tvvs"

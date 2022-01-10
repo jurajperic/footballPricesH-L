@@ -8,18 +8,16 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/constraintLayout"
-        >
-
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
         <ImageView
             android:id="@+id/itemPicture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/primary_color"
             android:contentDescription="@string/players_string"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,14 +38,13 @@
             android:fontFamily="@font/nunito"
             android:padding="8dp"
             android:text="@string/players_string"
+            android:textAlignment="center"
             android:textColor="@color/ternary_color"
             android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
 
 
         <TextView
@@ -69,40 +66,41 @@
 
         <Button
             android:id="@+id/higherBtn"
-            android:layout_width="189dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="104dp"
-            android:alpha="0.6"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
             android:backgroundTint="@color/higher_color"
             android:fontFamily="@font/nunito"
             android:text="@string/higher_string"
             android:textColor="@color/primary_color"
             android:textSize="20sp"
-            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lowerBtn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/itemPicture"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/itemName"
-            app:layout_constraintVertical_bias="0.954" />
+            app:layout_constraintVertical_bias="0.85" />
 
         <Button
+
             android:id="@+id/lowerBtn"
-            android:layout_width="189dp"
-            android:layout_height="48dp"
-            android:alpha="0.6"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
             android:backgroundTint="@color/lower_color"
             android:fontFamily="@font/nunito"
             android:text="@string/lower_string"
             android:textColor="@color/primary_color"
             android:textSize="20sp"
-            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/higherBtn"
-            app:layout_constraintVertical_bias="0.16" />
-
-
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/higherBtn"
+            app:layout_constraintTop_toBottomOf="@+id/itemName"
+            app:layout_constraintVertical_bias="0.85" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,17 +1,12 @@
 package com.example.footballvalueshl
 
-import android.content.ContentValues.TAG
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
+import kotlin.system.exitProcess
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,14 +14,35 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_layout)
 
-
         val playersBtn=findViewById<Button>(R.id.playersBtn)
-
+        val clubsBtn = findViewById<Button>(R.id.clubsBtn)
+        val countriesBtn=findViewById<Button>(R.id.countriesBtn)
+        val cvcButton = findViewById<Button>(R.id.multipleGameBtn)
+        val intent = Intent(this, PlayActivity::class.java)
         playersBtn.setOnClickListener {
-            val playersIntent = Intent(this, PlayActivity::class.java)
-            playersIntent.putExtra("MODE","players")
-            startActivity(playersIntent)
+            intent.putExtra("MODE","PLAYERS")
+            startActivity(intent)
 
         }
+        clubsBtn.setOnClickListener {
+            intent.putExtra("MODE","CLUBS")
+            startActivity(intent)
+
+        }
+        countriesBtn.setOnClickListener {
+            intent.putExtra("MODE","COUNTRIES")
+            startActivity(intent)
+
+        }
+        cvcButton.setOnClickListener {
+            intent.putExtra("MODE","CVC")
+            startActivity(intent)
+
+        }
+    }
+
+    override fun onBackPressed() {
+        finishAffinity()
+        exitProcess(0)
     }
 }

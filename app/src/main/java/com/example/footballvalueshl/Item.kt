@@ -1,10 +1,7 @@
 package com.example.footballvalueshl
 
 
-import android.content.Context
 import android.os.Bundle
-import android.text.Layout
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 
 
@@ -40,7 +35,7 @@ class Item : Fragment() {
 
 
         val isFirst = arguments?.getBoolean("FIRST")
-        val value= arguments?.getString("PRICE")?.toDouble()
+        val value= arguments?.getString("PRICE")?.toFloat()
 
 
 
@@ -55,23 +50,25 @@ class Item : Fragment() {
 
         higherBtn.visibility = View.GONE
         lowerBtn.visibility = View.GONE
-        price.text = "${value}m€"
+        price.text = "%.${2}f".format(value)+"m€"
         if(isFirst==false){
             higherBtn.visibility=View.VISIBLE
             lowerBtn.visibility=View.VISIBLE
             price.visibility=View.INVISIBLE
         }
 
-        fun CheckPrice(higher: Boolean){
+        fun checkPrice(higher: Boolean){
             Thread(Runnable {
                 var zeroVal = 0.00
-                while (zeroVal< value!!) {
+                val add=value!!.div(75)
+                while (zeroVal< value) {
                     Thread.sleep(20)
-                    zeroVal+=1
-                    activity?.runOnUiThread{price.text="${zeroVal}m€"}
+                    zeroVal+=add
+                    activity?.runOnUiThread{price.text="%.${2}f".format(zeroVal)+"m€"}
 
                 }
-                Thread.sleep(400)
+                activity?.runOnUiThread{price.text="%.${2}f".format(value)+"m€"}
+                Thread.sleep(200)
                 activity?.runOnUiThread{fragmentCallback.onButtonPressed(higher)}
 
 
@@ -86,7 +83,7 @@ class Item : Fragment() {
                     lowerBtn.visibility = View.GONE
                     price.visibility = View.VISIBLE
 
-                    CheckPrice(true)
+                    checkPrice(true)
 
 
                 }
@@ -96,7 +93,7 @@ class Item : Fragment() {
                         lowerBtn.visibility = View.GONE
                         price.visibility = View.VISIBLE
 
-                        CheckPrice(false)
+                        checkPrice(false)
 
 
                 }
