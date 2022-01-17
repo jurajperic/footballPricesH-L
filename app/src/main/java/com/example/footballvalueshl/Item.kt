@@ -50,7 +50,7 @@ class Item : Fragment() {
 
         higherBtn.visibility = View.GONE
         lowerBtn.visibility = View.GONE
-        price.text = "%.${2}f".format(value)+"m€"
+        price.text =getString(R.string.default_price,value)
         if(isFirst==false){
             higherBtn.visibility=View.VISIBLE
             lowerBtn.visibility=View.VISIBLE
@@ -64,10 +64,10 @@ class Item : Fragment() {
                 while (zeroVal< value) {
                     Thread.sleep(20)
                     zeroVal+=add
-                    activity?.runOnUiThread{price.text="%.${2}f".format(zeroVal)+"m€"}
+                    activity?.runOnUiThread{price.text=getString(R.string.default_price,zeroVal)}
 
                 }
-                activity?.runOnUiThread{price.text="%.${2}f".format(value)+"m€"}
+                activity?.runOnUiThread{price.text=getString(R.string.default_price,value)}
                 Thread.sleep(200)
                 activity?.runOnUiThread{fragmentCallback.onButtonPressed(higher)}
 

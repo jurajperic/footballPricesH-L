@@ -8,104 +8,83 @@
     tools:context=".MainActivity">
 
 
-
-
     <ImageView
         android:id="@+id/logo"
         android:layout_width="163dp"
         android:layout_height="170dp"
-        android:layout_marginTop="60dp"
         android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/countriesBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clubsBtn"
         app:srcCompat="@drawable/football"
         tools:ignore="ImageContrastCheck" />
 
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/nunito"
-        android:text="@string/app_name"
-        android:textColor="@color/secondary_color"
-        android:textFontWeight="800"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-         />
 
     <Button
         android:id="@+id/playersBtn"
         android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:fontFamily="@font/nunito"
-        android:textFontWeight="700"
-        android:textColor="@color/primary_color"
+        android:layout_height="70dp"
         android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/nunito"
         android:text="@string/players_string"
+        android:textColor="@color/primary_color"
+        android:textFontWeight="700"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/clubsBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/clubsBtn"
         android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:fontFamily="@font/nunito"
-        android:textFontWeight="700"
-        android:textColor="@color/primary_color"
+        android:layout_height="70dp"
         android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/nunito"
         android:text="@string/clubs_string"
+        android:textColor="@color/primary_color"
+        android:textFontWeight="700"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/countriesBtn"
+        app:layout_constraintBottom_toTopOf="@+id/logo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playersBtn" />
-
 
     <Button
         android:id="@+id/countriesBtn"
         android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:fontFamily="@font/nunito"
-        android:textFontWeight="700"
-        android:textColor="@color/primary_color"
+        android:layout_height="70dp"
         android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/nunito"
         android:text="@string/countries_string"
+        android:textColor="@color/primary_color"
+        android:textFontWeight="700"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/multipleGameBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clubsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Button
         android:id="@+id/multipleGameBtn"
         android:layout_width="300dp"
-        android:layout_height="55dp"
-        android:textFontWeight="700"
-        android:textColor="@color/primary_color"
-        android:fontFamily="@font/nunito"
+        android:layout_height="70dp"
         android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/nunito"
         android:text="@string/club_vs_countries_string"
+        android:textColor="@color/primary_color"
+        android:textFontWeight="700"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countriesBtn" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

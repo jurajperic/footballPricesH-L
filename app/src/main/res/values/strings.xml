@@ -4,7 +4,7 @@
     <string name="clubs_string">CLUBS</string>
     <string name="countries_string">COUNTRIES</string>
     <string name="club_vs_countries_string">CLUBS VS COUNTRIES</string>
-    <string name="default_price">0.00m€</string>
+    <string name="default_price">%.2f m€</string>
     <string name="higher_string">HIGHER</string>
     <string name="lower_string">LOWER</string>
     <string name="vs">VS</string>
@@ -12,5 +12,8 @@
     <string name="hscore">High score:</string>
     <string name="play_again">PLAY AGAIN</string>
     <string name="menu">Menu</string>
+    <string name="itemsList">Items List</string>
+    <string name="exit">Exit</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

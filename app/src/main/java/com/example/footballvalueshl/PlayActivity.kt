@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.transition.ChangeBounds
 import android.transition.TransitionManager
+import android.util.Log
 import android.view.animation.AnticipateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
@@ -77,6 +78,7 @@ class PlayActivity : AppCompatActivity(),FragmentCallback {
             randomIndex =(lowerBound until higherBound).random()
         } while (randomIndex in usedItems)
         usedItems.add(randomIndex)
+        if(usedItems.size==items.size)usedItems.clear()
         return randomIndex
     }
 
@@ -196,8 +198,9 @@ class PlayActivity : AppCompatActivity(),FragmentCallback {
 
     }
     private fun onFalseAnswer(){
-
+        val history= usedItems.slice(0..usedItems.size-2) as ArrayList<Int>
         endGameIntent.putExtra("SCORE", score)
+        endGameIntent.putExtra("LIST", history)
         vsTv.setBackgroundResource(R.drawable.circle_text_view_false)
         Handler().postDelayed({
             startActivity(endGameIntent)

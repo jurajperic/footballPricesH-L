@@ -1,5 +1,5 @@
 package com.example.footballvalueshl
 
 interface FragmentCallback {
-    fun onButtonPressed(higher: Boolean)
+    fun onButtonPressed(higher: Boolean=true)
 }
